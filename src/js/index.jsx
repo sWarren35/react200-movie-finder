@@ -1,24 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-//import  reducers from './reducers';
+import reducers from './reducers';
 import App from './app';
 import { createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
 
-function tempReducer () {
-  return null;
-}
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(tempReducer, composeEnhancers(
-  applyMiddleware(
-    promiseMiddleware()
-  )
-));
+const store = createStore(reducers, composeEnhancers(applyMiddleware(promiseMiddleware())));
+/* eslint-enable */
 
-/* Update render method invoke */
+
 render(
   <Provider store={ store }>
     <App />

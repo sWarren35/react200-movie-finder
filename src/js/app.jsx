@@ -7,15 +7,15 @@ import {
 import MovieSearchContainer from './containers/MovieSearchContainer/MovieSearchContainer';
 import MovieDetailContainer from './containers/MovieDetailContainer/MovieDetailContainer';
 
-  class App extends React.Component {
-    render() {
-      return (
-        <Router>
-          <div className='container'> 
-            <Route exact path='/' component={ MovieSearchContainer } />
-            <Route path='/movie/:id' component={ MovieDetailContainer } />
-          </div>
-        </Router>
-      )
-    }
+export default class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className='container'> 
+          <Route exact path='/' component={ MovieSearchContainer } />
+          <Route path='/movie/:id' component={ MovieDetailContainer } />
+        </div>
+      </Router>
+    )
   }
+}
