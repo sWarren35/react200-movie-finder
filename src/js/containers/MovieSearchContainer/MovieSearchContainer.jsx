@@ -18,7 +18,7 @@ export default class MovieSearchContainer extends React.Component {
     const { value } = event.target;
     dispatch(updateMovie(value));
   }
-  
+
   handleGoButton(e){
     const { dispatch, movie } = this.props;
     dispatch(getMovie(movie));
@@ -26,6 +26,7 @@ export default class MovieSearchContainer extends React.Component {
 
 render() {
   const { movie, movieData, showResults } = this.props;
+  console.log(movieData);
   let searchResults;
   if (showResults){
     searchResults = <div>
@@ -51,5 +52,5 @@ return (
     </div>
   </div>
   )
-}
+ }
 }

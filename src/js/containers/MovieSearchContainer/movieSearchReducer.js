@@ -1,6 +1,6 @@
 const defaultState = {
     movie:'',
-    movieData:[{"Title":"","Year":"","Poster":""}],
+    movieData:[{"Title":""}],
     showResults: false
 }
 
@@ -16,7 +16,8 @@ export default function movieSearchReducer(state = defaultState, action) {
         case 'GET_MOVIE_DATA_FULFILLED': {
           return {
             ...state,
-            movieData: payload.Search,
+            //payload in array for mapping in render function
+            movieData: [payload],
             showResults: true
           };
         }

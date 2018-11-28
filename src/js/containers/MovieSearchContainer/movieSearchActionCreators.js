@@ -10,7 +10,7 @@ export function getMovie(title) {
   return {
     type: 'GET_MOVIE_DATA',
     payload: axios
-    .get('http://www.omdbapi.com/?s=' + title + '&apikey=8730e0e')
+    .get('http://www.omdbapi.com/?t=' + title + '&apikey=8730e0e')
     .then(response => response.data)
   };
 }
