@@ -32,9 +32,9 @@ class MovieDetailContainer extends React.Component {
                 <div className='card-header text-white bg-primary text-center back-results'>Movie Details</div>
                 <div className='card-body'>
                   <p className="font-weight-bold">{movieSelect.Title}</p>
-                  {/* <label className='rounded-10' style={{ 'color': 'white', 'backgroundColor': 'darkGreen', 'padding': '0 10px', 'marginRight': '10px', 'border-radius': '10px' }}>{'Released ' + movieSelect.Year}</label>
+                  <label className='rounded-10' style={{ 'color': 'white', 'backgroundColor': 'darkGreen', 'padding': '0 10px', 'marginRight': '10px', 'border-radius': '10px' }}>{'Released ' + movieSelect.Year}</label>
                   <label className='rounded-10' style={{ 'color': 'white', 'backgroundColor': 'darkGreen', 'padding': '0 10px', 'marginRight': '10px', 'border-radius': '10px' }}>{movieSelect.Runtime}</label>
-                  <label className='rounded-10' style={{ 'color': 'white', 'backgroundColor': 'darkGreen', 'padding': '0 10px', 'marginRight': '10px', 'border-radius': '10px' }}>{movieSelect.Genre}</label> */}
+                  <label className='rounded-10' style={{ 'color': 'white', 'backgroundColor': 'darkGreen', 'padding': '0 10px', 'marginRight': '10px', 'border-radius': '10px' }}>{movieSelect.Genre}</label>
                   <p>{movieSelect.Plot}</p>
                   <p>{movieSelect.Awards}</p>
                   <div><strong>Metascore: </strong>{movieSelect.Metascore}</div>
