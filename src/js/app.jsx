@@ -11,7 +11,7 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <div className='container'> 
+        <div className='container-fluid'> 
           <Route exact path='/' component={ MovieSearchContainer } />
           <Route path='/movie/:id' component={ MovieDetailContainer } />
         </div>
