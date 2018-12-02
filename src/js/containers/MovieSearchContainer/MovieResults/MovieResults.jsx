@@ -29,7 +29,7 @@ class MovieResults extends React.Component {
                 <div className='card-body-results'>
                     {moviePoster}
                     <div className="search-heading">
-                        <p id="results" className="text-center"><strong>{movieItem.Title}</strong></p>
+                        <p id="results" className="testTitle text-center"><strong>{movieItem.Title}</strong></p>
                         <p id="results" className='text-center'>{movieItem.Year}</p>
                         <p className="detail-btn text-right pr-4" style={{"margin-top":"330px"}}>
                         <a href={"/#/movie/" + movieItem.imdbID}><button onClick={this.handleClick} className='btn btn-primary'>Movie Details</button></a>
