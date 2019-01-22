@@ -25,7 +25,6 @@ export default function movieSearchReducer(state = defaultState, action) {
         case 'GET_MOVIE_PLOT_FULFILLED': {
           return {
             ...state,
-            //payload in array for mapping in render function when searching by title..
             plot: [payload],
             showResults: true
           };

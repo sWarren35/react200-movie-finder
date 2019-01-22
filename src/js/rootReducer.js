@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import movieSearchReducer from './containers/MovieSearchContainer/movieSearchReducer';
+import movieSearchReducer from './MovieSearch/reducer';
 
 const reducers = combineReducers({
     getMovies: movieSearchReducer

@@ -1,4 +1,5 @@
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   context: path.join(__dirname, '/src'),
@@ -32,4 +33,12 @@ module.exports = {
       },
     ],
   },
+  node: {
+    fs: "empty"
+ },
+  plugins: [
+    new Dotenv({
+      path: path.resolve(__dirname,'.local-env')
+    })
+ ]
 };

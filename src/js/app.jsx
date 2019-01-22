@@ -4,16 +4,16 @@ import {
   Route 
 } from 'react-router-dom';
 
-import MovieSearchContainer from './containers/MovieSearchContainer/index';
-import MovieDetailContainer from './containers/MovieDetailContainer/index';
+import MovieSearchBar from './MovieSearch/index';
+import MovieDetailsPage from './MovieDetailsPage/index';
 
 export default class App extends Component {
   render() {
     return (
       <Router>
         <div className='container-fluid'> 
-          <Route exact path='/' component={ MovieSearchContainer } />
-          <Route path='/movie/:id' component={ MovieDetailContainer } />
+          <Route exact path='/' component={ MovieSearchBar } />
+          <Route path='/movie/:id' component={ MovieDetailsPage } />
         </div>
       </Router>
     )

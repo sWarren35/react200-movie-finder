@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import MovieSearchContainer from './MovieSearchContainer';
+import MovieSearchBar from './MovieSearchBar';
 
 function mapStoreToProps(store) {
   return {
@@ -11,4 +11,4 @@ function mapStoreToProps(store) {
   };
 }
 
-export default connect(mapStoreToProps)(MovieSearchContainer);
+export default connect(mapStoreToProps)(MovieSearchBar);

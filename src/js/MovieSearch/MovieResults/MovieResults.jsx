@@ -1,14 +1,15 @@
 import React from 'react';
 
 import {
-    getMovieSelect,
-} from '../movieSearchActionCreators';
+  getMovieSelect
+} from '../actions';
 
 class MovieResults extends React.Component {
     constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
+       super(props);
+       this.handleClick = this.handleClick.bind(this);
     }
+
     handleClick(e) {
         const { dispatch, movieItem } = this.props;
         dispatch(getMovieSelect(movieItem.imdbID));
@@ -23,7 +24,6 @@ class MovieResults extends React.Component {
         else {
             moviePoster = <img className="rounded float-left img-thumbnail" src={movieItem.Poster} />
         }
-
         return (
             <div className='card' style={{"background":"none", "margin-bottom": "-120px", "margin-top": "-20px"}}>
                 <div className='card-body-results'>
@@ -32,12 +32,10 @@ class MovieResults extends React.Component {
                         <p id="results" className="testTitle text-center"><strong>{movieItem.Title}</strong></p>
                         <p id="results" className='text-center'>{movieItem.Year}</p>
                         <p className="detail-btn text-right pr-4" style={{"margin-top":"330px"}}>
-                        <a href={"/#/movie/" + movieItem.imdbID}><button onClick={this.handleClick} className='btn btn-primary'>Movie Details</button></a>
-                    </p>
+                            <a href={"/#/movie/" + movieItem.imdbID}><button onClick={this.handleClick} 
+                            className='btn btn-primary'>Movie Details</button></a>
+                        </p>
                     </div>
-                
-                </div>
-                <div>
                 </div>
             </div>
         )
