@@ -7,8 +7,7 @@
   "description": "A new React project.",
   "main": "server/index.js",
   "scripts": {
-    "build": "webpack --mode development",
-    "dev": "concurrently \"webpack -w\" \"nodemon server/index.js\"",
+    "build": "webpack --mode production",
     "start": "npm run build && node server/index.js",
     "less": "lessc src/css/style.less dist/css/style.css",
     "lint": "eslint .",
